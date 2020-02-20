@@ -13,18 +13,13 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     
     #Calculate Total Months
-    months = list(csvreader)
-    total_months = len(months)
+    data = list(csvreader)
+    total_months = len(data)
 
     #Print Total Months to terminal
-    print(f"Total Months: " + str(total_months))
-    
-# Read through rows (need to complete looo)
-    #for row in csvreader:
+    print(f"Total Months: {str(total_months)}")
 
-
-# Lists to Store data (notsure if needed)
-#months = []
-#net_total = []
-
-
+    for row in csvreader:
+       net_total = sum(int(row[1]))
+       
+       print(f"Total: {str(net_total)}")
