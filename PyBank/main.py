@@ -74,3 +74,4 @@ output_file = os.path.join('financial_analysis.txt')
 #Print the results to txt file
 with open(output_file, "w") as txt_file:
     txt_file.write(financial_analysis)
+    
