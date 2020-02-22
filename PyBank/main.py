@@ -35,12 +35,31 @@ with open(csvpath) as csvfile:
     revenue_change_sum = sum(revenue_change)
     revenue_change_count = len(revenue_change)
 
-    average_change = revenue_change_sum / revenue_change_count
+    average_change = round(revenue_change_sum / revenue_change_count, 2)
 
     print(f"Average Change: ${str(average_change)}")
 
+start = 0
+revenue_change.insert(0,start)
 
-    
+dict_zip = dict(zip(months, revenue_change))
+
+max_month_key = max(dict_zip, key=dict_zip.get)
+
+max_change = max(revenue_change)
+
+print(f"Greatest Increase in Profits: {str(max_month_key)} (${str(max_change)})")
+
+
+min_month_key = min(dict_zip, key=dict_zip.get)
+
+min_change = min(revenue_change)
+
+print(f"Greatest Decrease in Profits: {str(min_month_key)} (${str(min_change)})")
+
+
+
+
 
     #for date in months:
         #print(date)
