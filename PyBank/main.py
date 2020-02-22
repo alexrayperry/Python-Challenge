@@ -1,5 +1,5 @@
-print("Financial Analysis")
-print("------------------------")
+#print("Financial Analysis")
+#print("------------------------")
 
 import os 
 import csv
@@ -68,22 +68,8 @@ financial_analysis = (
 
 print(financial_analysis, end="")
 
+output_file = os.path.join('financial_analysis.txt')
 
-    #for date in months:
-        #print(date)
-
-    #for net in profit_loss:
-        #print(net)
-
+with open(output_file, "w") as txt_file:
+    txt_file.write(financial_analysis)
     
-    #Calculate Total Months
-    #data = list(csvreader)
-    #total_months = len(data)
-
-    #Print Total Months to terminal
-    #print(f"Total Months: {str(total_months)}")
-
-    #for row in csvreader:
-       #net_total = sum(int(row[1]))
-       
-      # print(f"Total: {str(net_total)}")
